@@ -94,6 +94,30 @@ const camo = () => {
   Linking.openURL('https://stockx.com/air-jordan-3-retro-low-multi-camo');
 };
 
+const coolGreyNike = () => {
+  Linking.openURL(
+    'https://www.nike.com/launch/t/air-jordan-11-cool-grey?cp=usns_aff_nike_content_PID_4441350_rewardStyle&cid=4942550&cjevent=c65ca8be516711ec81b508380a1c0e0e',
+  );
+};
+
+const lowBlackToeNike = () => {
+  Linking.openURL(
+    'https://www.nike.com/t/air-jordan-1-low-shoes-NmRl7V/553558-612?cid=4942550&cp=usns_aff_nike_content_PID_4441350_rewardStyle&cjevent=5af86d68516811ec836807280a1c0e0b',
+  );
+};
+
+const redThunder = () => {
+  Linking.openURL(
+    'https://stockx.com/air-jordan-4-retro-red-thunder',
+  );
+};
+
+const bredPatentLeather = () => {
+  Linking.openURL(
+    'https://stockx.com/air-jordan-1-retro-high-og-bred-patent',
+  );
+};
+
 function royaltyOnShowActionSheet() {
   if (Platform.OS === 'ios') {
     ActionSheetIOS.showActionSheetWithOptions(
@@ -151,6 +175,66 @@ function bootsOnShowActionSheet() {
 const Posts = [
   {
     id: '1',
+    userName: 'December 4',
+    userImg: require('../assets/users/jordanlogo.webp'),
+    postTime: 'Buy Other Kicks',
+    post: 'Retro 1 - Gore Tex',
+    postImg: require('../assets/images/GoreTex.jpeg'),
+    liked: true,
+    link: goreTexNike,
+    // likes: '0',
+    // comments: '0',
+  },
+  {
+    id: '2',
+    userName: 'December 8',
+    userImg: require('../assets/users/jordanlogo.webp'),
+    postTime: 'Buy Other Kicks',
+    post: 'AJ 1 Low',
+    postImg: require('../assets/images/aj1lowbred.jpeg'),
+    liked: true,
+    link: lowBlackToeNike,
+    // likes: '0',
+    // comments: '0',
+  },
+  {
+    id: '3',
+    userName: 'December 11',
+    userImg: require('../assets/users/jordanlogo.webp'),
+    postTime: 'Buy Other Kicks',
+    post: 'Retro 11 - Cool Grey',
+    postImg: require('../assets/images/coolgrey11.jpeg'),
+    liked: true,
+    link: coolGreyNike,
+    // likes: '0',
+    // comments: '0',
+  },
+  {
+    id: '4',
+    userName: 'December 23',
+    userImg: require('../assets/users/jordanlogo.webp'),
+    postTime: 'Buy Other Kicks',
+    post: 'Retro 4 - Red Thunder',
+    postImg: require('../assets/images/redthunder4.jpeg'),
+    liked: true,
+    link: redThunder,
+    // likes: '0',
+    // comments: '0',
+  },
+  {
+    id: '5',
+    userName: 'December 30',
+    userImg: require('../assets/users/jordanlogo.webp'),
+    postTime: 'Buy Other Kicks',
+    post: 'Retro 1 Patent - Blk/Red',
+    postImg: require('../assets/images/bredpatent1.jpeg'),
+    liked: true,
+    link: bredPatentLeather,
+    // likes: '0',
+    // comments: '0',
+  },
+  {
+    id: '6',
     userName: 'October 30',
     userImg: require('../assets/users/jordanlogo.webp'),
     postTime: 'Buy Other Kicks',
@@ -160,7 +244,7 @@ const Posts = [
     link: pineGreen,
   },
   {
-    id: '2',
+    id: '7',
     userName: 'November 4',
     userImg: require('../assets/users/jordanlogo.webp'),
     postTime: 'Buy Other Kicks',
@@ -172,7 +256,7 @@ const Posts = [
     // comments: '0',
   },
   {
-    id: '3',
+    id: '8',
     userName: 'November 12',
     userImg: require('../assets/users/jordanlogo.webp'),
     postTime: 'Buy Other Kicks',
@@ -184,7 +268,7 @@ const Posts = [
     // comments: '0',
   },
   {
-    id: '4',
+    id: '9',
     userName: 'November 12',
     userImg: require('../assets/users/jordanlogo.webp'),
     postTime: 'Buy Other Kicks',
@@ -196,7 +280,7 @@ const Posts = [
     // comments: '4',
   },
   {
-    id: '5',
+    id: '10',
     userName: 'November 13',
     userImg: require('../assets/users/jordanlogo.webp'),
     postTime: 'Buy Other Kicks',
@@ -208,7 +292,7 @@ const Posts = [
     // comments: '0',
   },
   {
-    id: '6',
+    id: '11',
     userName: 'November 20',
     userImg: require('../assets/users/jordanlogo.webp'),
     postTime: 'Buy Other Kicks',
@@ -220,19 +304,7 @@ const Posts = [
     // comments: '0',
   },
   {
-    id: '7',
-    userName: 'November 23',
-    userImg: require('../assets/users/jordanlogo.webp'),
-    postTime: 'Buy Other Kicks',
-    post: 'Retro 1 - Gore Tex',
-    postImg: require('../assets/images/GoreTex.jpeg'),
-    liked: true,
-    link: goreTexNike,
-    // likes: '0',
-    // comments: '0',
-  },
-  {
-    id: '8',
+    id: '12',
     userName: 'November 24',
     userImg: require('../assets/users/jordanlogo.webp'),
     postTime: 'Buy Other Kicks',
@@ -244,7 +316,7 @@ const Posts = [
     // comments: '0',
   },
   {
-    id: '9',
+    id: '13',
     userName: 'November 26',
     userImg: require('../assets/users/jordanlogo.webp'),
     postTime: 'Buy Other Kicks',
@@ -256,7 +328,7 @@ const Posts = [
     // comments: '0',
   },
   {
-    id: '10',
+    id: '14',
     userName: 'November 29',
     userImg: require('../assets/users/jordanlogo.webp'),
     postTime: 'Buy Other Kicks',
@@ -328,6 +400,41 @@ const HomeScreen = ({navigation}) => {
         <ScrollView>
           <Container>
             <ReleaseDateCard
+              userName="December 5"
+              name="Retro 1 - Gore Tex"
+              postImg={require('../assets/images/GoreTex.jpeg')}
+              link={goreTexNike}
+              liked={true}
+            />
+            <ReleaseDateCard
+              userName="December 8"
+              name="AJ 1 Low - Wh/Black/Red"
+              postImg={require('../assets/images/aj1lowbred.jpeg')}
+              link={lowBlackToeNike}
+              liked={true}
+            />
+            <ReleaseDateCard
+              userName="December 11"
+              name="Retro 11 - Cool Grey"
+              postImg={require('../assets/images/coolgrey11.jpeg')}
+              link={coolGreyNike}
+              liked={true}
+            />
+            <ReleaseDateCard
+              userName="December 23"
+              name="Retro 4 - Red Thunder"
+              postImg={require('../assets/images/redthunder4.jpeg')}
+              link={redThunder}
+              liked={true}
+            />
+            <ReleaseDateCard
+              userName="December 30"
+              name="Retro 1 Patent - Blk/Red"
+              postImg={require('../assets/images/bredpatent1.jpeg')}
+              link={bredPatentLeather}
+              liked={true}
+            />
+            <ReleaseDateCard
               userName="October 30"
               name="Retro 3 - Pine Green"
               postImg={require('../assets/images/3pine.jpg')}
@@ -367,13 +474,6 @@ const HomeScreen = ({navigation}) => {
               name="Retro 1 - Bordeaux"
               postImg={require('../assets/images/Air-Jordan-1-Bordeaux.jpg')}
               link={bordeauxOnShowActionSheet}
-              liked={true}
-            />
-            <ReleaseDateCard
-              userName="November 23"
-              name="Retro 1 - Gore Tex"
-              postImg={require('../assets/images/GoreTex.jpeg')}
-              link={goreTexNike}
               liked={true}
             />
             <ReleaseDateCard
