@@ -1,16 +1,11 @@
 import React, {useState} from 'react';
 import {
   View,
-  Text,
-  ScrollView,
-  Touchable,
   TouchableOpacity,
   Linking,
 } from 'react-native';
-import {styles} from './styles/feedback-privacy-styles';
-import {FeedbackPrivacyItem} from '../components/feedback-privacy-item';
+
 import {ListItem, Icon} from 'react-native-elements';
-import {Navigation} from 'react-native-navigation';
 
 const FeedbackPrivacy = ({navigation}) => {
   const sendFeedbackoute = () => {

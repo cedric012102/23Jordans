@@ -25,6 +25,7 @@
   "dependencies": {
     "@alessiocancian/react-native-actionsheet": "^3.1.1",
     "@firebase/firestore": "^3.3.0",
+    "@invertase/react-native-apple-authentication": "^2.1.5",
     "@react-native-async-storage/async-storage": "^1.15.11",
     "@react-native-community/masked-view": "^0.1.11",
     "@react-native-firebase/app": "^13.0.1",
@@ -42,7 +43,7 @@
     "lint-staged": "^11.2.6",
     "moment": "^2.29.1",
     "react": "17.0.2",
-    "react-native": "^0.66.3",
+    "react-native": "0.67.1",
     "react-native-action-button": "^2.8.5",
     "react-native-awesome-modal": "^0.2.0",
     "react-native-elements": "^3.4.2",
@@ -62,6 +63,7 @@
     "react-native-uuid": "^2.0.1",
     "react-native-vector-icons": "^9.0.0",
     "react-native-video": "^5.2.0",
+    "react-query": "^3.34.8",
     "reanimated-bottom-sheet": "^1.0.0-alpha.22",
     "styled-components": "^5.3.3",
     "tachyons": "^4.12.0"
@@ -80,5 +82,18 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cedric012102/23Jordans.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cedric012102/23Jordans/issues"
+  },
+  "homepage": "https://github.com/cedric012102/23Jordans#readme",
+  "description": ""
 }

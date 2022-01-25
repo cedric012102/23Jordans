@@ -15,6 +15,11 @@ import styles from './styles/login-screen-style';
 import {AuthContext} from '../navigation/AuthProvider';
 import Video from 'react-native-video';
 
+import {
+  AppleButton,
+  appleAuth,
+} from '@invertase/react-native-apple-authentication';
+
 const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -24,7 +29,7 @@ const LoginScreen = ({navigation}) => {
     setPaused(!paused);
   };
 
-  const {login, googleLogin, fbLogin, reset} = useContext(AuthContext);
+  const {login, googleLogin, fbLogin, appleLogin, reset} = useContext(AuthContext);
 
   return (
     <ScrollView bounces={false}>
@@ -86,6 +91,19 @@ const LoginScreen = ({navigation}) => {
             onPress={() => googleLogin()}
           />
 
+          <AppleButton
+            buttonStyle={AppleButton.Style.WHITE}
+            buttonType={AppleButton.Type.SIGN_IN}
+            style={{
+              width: 160,
+              height: 45,
+              marginTop: 15,
+            }}
+            onPress={() =>
+              appleLogin()
+            }
+          />
+
           <TouchableOpacity
             style={styles.forgotButton}
             onPress={() => navigation.navigate('Signup')}
@@ -98,6 +116,7 @@ const LoginScreen = ({navigation}) => {
       </TouchableWithoutFeedback>
     </ScrollView>
   );
+
 };
 
 export default LoginScreen;

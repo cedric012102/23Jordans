@@ -105,12 +105,7 @@ const ProfileScreen = ({navigation, route}) => {
       >
         <Image
           style={styles.userImg}
-          source={{
-            uri: userData
-              ? userData.userImg ||
-                'https://lh5.googleusercontent.com/-b0PKyNuQv5s/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclxAM4M1SCBGAO7Rp-QP6zgBEUkOQ/s96-c/photo.jpg'
-              : 'https://lh5.googleusercontent.com/-b0PKyNuQv5s/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclxAM4M1SCBGAO7Rp-QP6zgBEUkOQ/s96-c/photo.jpg',
-          }}
+          source={require('../assets/users/jordanlogo.webp')}
         />
         <Text style={styles.userName}>
           {userData ? userData.fname || 'Jordan' : 'Jordan'}{' '}

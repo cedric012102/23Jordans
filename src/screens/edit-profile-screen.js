@@ -44,11 +44,11 @@ const EditProfileScreen = () => {
   };
 
   const handleUpdate = async () => {
-    let imgUrl = await uploadImage();
+    // let imgUrl = await uploadImage();
 
-    if (imgUrl == null && userData.userImg) {
-      imgUrl = userData.userImg;
-    }
+    // if (imgUrl == null && userData.userImg) {
+    //   imgUrl = userData.userImg;
+    // }
 
     firestore()
       .collection('users')
@@ -57,10 +57,10 @@ const EditProfileScreen = () => {
         fname: userData.fname,
         lname: userData.lname,
         about: userData.about,
-        phone: userData.phone,
-        country: userData.country,
-        city: userData.city,
-        userImg: imgUrl,
+        // phone: userData.phone,
+        // country: userData.country,
+        // city: userData.city,
+        // userImg: imgUrl,
       })
       .then(() => {
         console.log('User Updated!');
@@ -71,121 +71,121 @@ const EditProfileScreen = () => {
       });
   };
 
-  const uploadImage = async () => {
-    if (image == null) {
-      return null;
-    }
-    const uploadUri = image;
-    let filename = uploadUri.substring(uploadUri.lastIndexOf('/') + 1);
+  // const uploadImage = async () => {
+  //   if (image == null) {
+  //     return null;
+  //   }
+  //   const uploadUri = image;
+  //   let filename = uploadUri.substring(uploadUri.lastIndexOf('/') + 1);
 
-    // Add timestamp to File Name
-    const extension = filename.split('.').pop();
-    const name = filename.split('.').slice(0, -1).join('.');
-    filename = name + Date.now() + '.' + extension;
+  //   // Add timestamp to File Name
+  //   const extension = filename.split('.').pop();
+  //   const name = filename.split('.').slice(0, -1).join('.');
+  //   filename = name + Date.now() + '.' + extension;
 
-    setUploading(true);
-    setTransferred(0);
+  //   setUploading(true);
+  //   setTransferred(0);
 
-    const storageRef = storage().ref(`photos/${filename}`);
-    const task = storageRef.putFile(uploadUri);
+  //   const storageRef = storage().ref(`photos/${filename}`);
+  //   const task = storageRef.putFile(uploadUri);
 
-    // Set transferred state
-    task.on('state_changed', taskSnapshot => {
-      console.log(
-        `${taskSnapshot.bytesTransferred} transferred out of ${taskSnapshot.totalBytes}`,
-      );
+  //   // Set transferred state
+  //   task.on('state_changed', taskSnapshot => {
+  //     console.log(
+  //       `${taskSnapshot.bytesTransferred} transferred out of ${taskSnapshot.totalBytes}`,
+  //     );
 
-      setTransferred(
-        Math.round(taskSnapshot.bytesTransferred / taskSnapshot.totalBytes) *
-          100,
-      );
-    });
+  //     setTransferred(
+  //       Math.round(taskSnapshot.bytesTransferred / taskSnapshot.totalBytes) *
+  //         100,
+  //     );
+  //   });
 
-    try {
-      await task;
+  //   try {
+  //     await task;
 
-      const url = await storageRef.getDownloadURL();
+  //     const url = await storageRef.getDownloadURL();
 
-      setUploading(false);
-      setImage(null);
+  //     setUploading(false);
+  //     setImage(null);
 
-      // Alert.alert(
-      //   'Image uploaded!',
-      //   'Your image has been uploaded to the Firebase Cloud Storage Successfully!',
-      // );
-      return url;
-    } catch (e) {
-      console.log(e);
-      return null;
-    }
-  };
+  //     // Alert.alert(
+  //     //   'Image uploaded!',
+  //     //   'Your image has been uploaded to the Firebase Cloud Storage Successfully!',
+  //     // );
+  //     return url;
+  //   } catch (e) {
+  //     console.log(e);
+  //     return null;
+  //   }
+  // };
 
   useEffect(() => {
     getUser();
   }, []);
 
-  const takePhotoFromCamera = () => {
-    ImagePicker.openCamera({
-      compressImageMaxWidth: 300,
-      compressImageMaxHeight: 300,
-      cropping: true,
-      compressImageQuality: 0.7,
-    }).then(image => {
-      console.log(image);
-      const imageUri = Platform.OS === 'ios' ? image.sourceURL : image.path;
-      setImage(imageUri);
-      this.bs.current.snapTo(1);
-    });
-  };
+  // const takePhotoFromCamera = () => {
+  //   ImagePicker.openCamera({
+  //     compressImageMaxWidth: 300,
+  //     compressImageMaxHeight: 300,
+  //     cropping: true,
+  //     compressImageQuality: 0.7,
+  //   }).then(image => {
+  //     console.log(image);
+  //     const imageUri = Platform.OS === 'ios' ? image.sourceURL : image.path;
+  //     setImage(imageUri);
+  //     this.bs.current.snapTo(1);
+  //   });
+  // };
 
-  const choosePhotoFromLibrary = () => {
-    ImagePicker.openPicker({
-      width: 300,
-      height: 300,
-      cropping: true,
-      compressImageQuality: 0.7,
-    }).then(image => {
-      console.log(image);
-      const imageUri = Platform.OS === 'ios' ? image.sourceURL : image.path;
-      setImage(imageUri);
-      this.bs.current.snapTo(1);
-    });
-  };
+  // const choosePhotoFromLibrary = () => {
+  //   ImagePicker.openPicker({
+  //     width: 300,
+  //     height: 300,
+  //     cropping: true,
+  //     compressImageQuality: 0.7,
+  //   }).then(image => {
+  //     console.log(image);
+  //     const imageUri = Platform.OS === 'ios' ? image.sourceURL : image.path;
+  //     setImage(imageUri);
+  //     this.bs.current.snapTo(1);
+  //   });
+  // };
 
-  renderInner = () => (
-    <View style={styles.panel}>
-      <View style={{alignItems: 'center'}}>
-        <Text style={styles.panelTitle}>Upload Photo</Text>
-        <Text style={styles.panelSubtitle}>Choose Your Profile Picture</Text>
-      </View>
-      <TouchableOpacity
-        style={styles.panelButton}
-        onPress={takePhotoFromCamera}
-      >
-        <Text style={styles.panelButtonTitle}>Take Photo</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.panelButton}
-        onPress={choosePhotoFromLibrary}
-      >
-        <Text style={styles.panelButtonTitle}>Choose From Library</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.panelButton}
-        onPress={() => this.bs.current.snapTo(1)}
-      >
-        <Text style={styles.panelButtonTitle}>Cancel</Text>
-      </TouchableOpacity>
-    </View>
-  );
+  // renderInner = () => (
+  //   <View style={styles.panel}>
+  //     <View style={{alignItems: 'center'}}>
+  //       <Text style={styles.panelTitle}>Upload Photo</Text>
+  //       <Text style={styles.panelSubtitle}>Choose Your Profile Picture</Text>
+  //     </View>
+  //     <TouchableOpacity
+  //       style={styles.panelButton}
+  //       onPress={takePhotoFromCamera}
+  //     >
+  //       <Text style={styles.panelButtonTitle}>Take Photo</Text>
+  //     </TouchableOpacity>
+  //     <TouchableOpacity
+  //       style={styles.panelButton}
+  //       onPress={choosePhotoFromLibrary}
+  //     >
+  //       <Text style={styles.panelButtonTitle}>Choose From Library</Text>
+  //     </TouchableOpacity>
+  //     <TouchableOpacity
+  //       style={styles.panelButton}
+  //       onPress={() => this.bs.current.snapTo(1)}
+  //     >
+  //       <Text style={styles.panelButtonTitle}>Cancel</Text>
+  //     </TouchableOpacity>
+  //   </View>
+  // );
 
-  renderHeader = () => (
-    <View style={styles.header}>
-      <View style={styles.panelHeader}>
-        <View style={styles.panelHandle} />
-      </View>
-    </View>
-  );
+  // renderHeader = () => (
+  //   <View style={styles.header}>
+  //     <View style={styles.panelHeader}>
+  //       <View style={styles.panelHandle} />
+  //     </View>
+  //   </View>
+  // );
 
   bs = React.createRef();
   fall = new Animated.Value(1);
@@ -208,7 +208,7 @@ const EditProfileScreen = () => {
         }}
       >
         <View style={{alignItems: 'center'}}>
-          <TouchableOpacity onPress={() => this.bs.current.snapTo(0)}>
+          {/* <TouchableOpacity onPress={() => this.bs.current.snapTo(0)}>
             <View
               style={{
                 height: 100,
@@ -253,7 +253,7 @@ const EditProfileScreen = () => {
                 </View>
               </ImageBackground>
             </View>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
           <Text style={{marginTop: 10, fontSize: 18, fontWeight: 'bold'}}>
             {userData ? userData.fname : ''} {userData ? userData.lname : ''}
           </Text>
@@ -287,7 +287,7 @@ const EditProfileScreen = () => {
           <TextInput
             multiline
             numberOfLines={3}
-            placeholder="About Me"
+            placeholder="Favorite Quote"
             placeholderTextColor="#666666"
             value={userData ? userData.about : ''}
             onChangeText={txt => setUserData({...userData, about: txt})}
@@ -295,7 +295,7 @@ const EditProfileScreen = () => {
             style={[styles.textInput, {height: 40}]}
           />
         </View>
-        <View style={styles.action}>
+        {/* <View style={styles.action}>
           <Feather name="phone" color="#333333" size={20} />
           <TextInput
             placeholder="Phone"
@@ -306,9 +306,9 @@ const EditProfileScreen = () => {
             onChangeText={txt => setUserData({...userData, phone: txt})}
             style={styles.textInput}
           />
-        </View>
+        </View> */}
 
-        <View style={styles.action}>
+        {/* <View style={styles.action}>
           <FontAwesome name="globe" color="#333333" size={20} />
           <TextInput
             placeholder="Country"
@@ -318,8 +318,8 @@ const EditProfileScreen = () => {
             onChangeText={txt => setUserData({...userData, country: txt})}
             style={styles.textInput}
           />
-        </View>
-        <View style={styles.action}>
+        </View> */}
+        {/* <View style={styles.action}>
           <MaterialCommunityIcons
             name="map-marker-outline"
             color="#333333"
@@ -333,7 +333,7 @@ const EditProfileScreen = () => {
             onChangeText={txt => setUserData({...userData, city: txt})}
             style={styles.textInput}
           />
-        </View>
+        </View> */}
         <FormButton buttonTitle="Update" onPress={handleUpdate} />
       </Animated.View>
     </View>

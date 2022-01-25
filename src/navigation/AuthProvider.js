@@ -2,6 +2,9 @@ import React, {createContext, useState} from 'react';
 import auth from '@react-native-firebase/auth';
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
 import {LoginManager, AccessToken} from 'react-native-fbsdk-next';
+import {
+  appleAuth,
+} from '@invertase/react-native-apple-authentication';
 import firestore from '@react-native-firebase/firestore';
 import {Alert} from 'react-native';
 import Auth, {firebase} from '@react-native-firebase/auth';
@@ -84,6 +87,52 @@ export const AuthProvider = ({children}) => {
             // Sign-in the user with the credential
             await auth()
               .signInWithCredential(facebookCredential)
+              .then(() => {
+                console.log('current User', auth().currentUser);
+                firestore()
+                  .collection('users')
+                  .doc(auth().currentUser.uid)
+                  .set({
+                    fname: '',
+                    lname: '',
+                    email: auth().currentUser.email,
+                    createdAt: firestore.Timestamp.fromDate(new Date()),
+                    userImg: null,
+                  })
+                  .catch(error => {
+                    console.log(
+                      'Something went wrong with added user to facebook',
+                    );
+                  });
+              });
+          } catch (error) {
+            console.log({error});
+          }
+        },
+
+        appleLogin: async () => {
+          try {
+            // Start the sign-in request
+            const appleAuthRequestResponse = await appleAuth.performRequest({
+              requestedOperation: appleAuth.Operation.LOGIN,
+              requestedScopes: [appleAuth.Scope.EMAIL, appleAuth.Scope.FULL_NAME],
+            });
+      
+            // Ensure Apple returned a user identityToken
+            if (!appleAuthRequestResponse.identityToken) {
+              throw 'Apple Sign-In failed - no identify token returned';
+            }
+      
+            // Create a Firebase credential from the response
+            const {identityToken, nonce} = appleAuthRequestResponse;
+            const appleCredential = Auth.AppleAuthProvider.credential(
+              identityToken,
+              nonce,
+            );
+
+            // Sign-in the user with the credential
+            await Auth()
+              .signInWithCredential(appleCredential)
               .then(() => {
                 console.log('current User', auth().currentUser);
                 firestore()
