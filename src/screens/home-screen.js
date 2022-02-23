@@ -400,7 +400,7 @@ const HomeScreen = ({navigation}) => {
         <ScrollView>
           <Container>
             <ReleaseDateCard
-              userName="December 5"
+              userName="December 50"
               name="Retro 1 - Gore Tex"
               postImg={require('../assets/images/GoreTex.jpeg')}
               link={goreTexNike}
@@ -477,7 +477,7 @@ const HomeScreen = ({navigation}) => {
               liked={true}
             />
             <ReleaseDateCard
-              userName="November 24"
+              userName="November 2"
               name="AJ 9 Boots"
               postImg={require('../assets/images/ajboots.jpeg')}
               link={bootsOnShowActionSheet}

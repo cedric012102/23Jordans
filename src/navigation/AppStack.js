@@ -2,50 +2,79 @@ import React from 'react';
 import {View} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+
 import HomeScreen from '../screens/home-screen';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import ProfileScreen from '../screens/profile-screen';
 import EditProfileScreen from '../screens/edit-profile-screen';
-import History from '../screens/history';
 import AppInfo from '../screens/app-info';
-import AirJordan1Screen from '../screens/air-jordan-1-screen';
-import AirJordan2Screen from '../screens/air-jordan-2-screen';
-import AirJordan3Screen from '../screens/air-jordan-3-screen';
-import AirJordan4Screen from '../screens/air-jordan-4-screen';
-import AirJordan5Screen from '../screens/air-jordan-5-screen';
-import AirJordan6Screen from '../screens/air-jordan-6-screen';
-import AirJordan7Screen from '../screens/air-jordan-7-screen';
-import AirJordan8Screen from '../screens/air-jordan-8-screen';
-import AirJordan9Screen from '../screens/air-jordan-9-screen';
-import AirJordan10Screen from '../screens/air-jordan-10-screen';
-import AirJordan11Screen from '../screens/air-jordan-11-screen';
-import AirJordan12Screen from '../screens/air-jordan-12-screen';
-import AirJordan13Screen from '../screens/air-jordan-13-screen';
-import AirJordan14Screen from '../screens/air-jordan-14-screen';
-import AirJordan15Screen from '../screens/air-jordan-15-screen';
-import AirJordan16Screen from '../screens/air-jordan-16-screen';
-import AirJordan17Screen from '../screens/air-jordan-17-screen';
-import AirJordan18Screen from '../screens/air-jordan-18-screen';
-import AirJordan19Screen from '../screens/air-jordan-19-screen';
-import AirJordan20Screen from '../screens/air-jordan-20-screen';
-import AirJordan21Screen from '../screens/air-jordan-21-screen';
-import AirJordan22Screen from '../screens/air-jordan-22-screen';
-import AirJordan23Screen from '../screens/air-jordan-23-screen';
-import {LogoTitle} from '../components/logo-title';
 import {MoreOptionsOverlay} from '../components/more-options-overlay';
 import FeedbackPrivacyScreen from '../screens/feedback-privacy-screen';
 import AccountInfoScreen from '../screens/account-info-screen';
 import SendFeedbackScreen from '../screens/send-feedback-screen';
+
+import History from '../screens/history';
+import AirJordan1Screen from '../screens/SneakerHistoryScreens/air-jordan-1-screen';
+import AirJordan2Screen from '../screens/SneakerHistoryScreens/air-jordan-2-screen';
+import AirJordan3Screen from '../screens/SneakerHistoryScreens/air-jordan-3-screen';
+import AirJordan4Screen from '../screens/SneakerHistoryScreens/air-jordan-4-screen';
+import AirJordan5Screen from '../screens/SneakerHistoryScreens/air-jordan-5-screen';
+import AirJordan6Screen from '../screens/SneakerHistoryScreens/air-jordan-6-screen';
+import AirJordan7Screen from '../screens/SneakerHistoryScreens/air-jordan-7-screen';
+import AirJordan8Screen from '../screens/SneakerHistoryScreens/air-jordan-8-screen';
+import AirJordan9Screen from '../screens/SneakerHistoryScreens/air-jordan-9-screen';
+import AirJordan10Screen from '../screens/SneakerHistoryScreens/air-jordan-10-screen';
+import AirJordan11Screen from '../screens/SneakerHistoryScreens/air-jordan-11-screen';
+import AirJordan12Screen from '../screens/SneakerHistoryScreens/air-jordan-12-screen';
+import AirJordan13Screen from '../screens/SneakerHistoryScreens/air-jordan-13-screen';
+import AirJordan14Screen from '../screens/SneakerHistoryScreens/air-jordan-14-screen';
+import AirJordan15Screen from '../screens/SneakerHistoryScreens/air-jordan-15-screen';
+import AirJordan16Screen from '../screens/SneakerHistoryScreens/air-jordan-16-screen';
+import AirJordan17Screen from '../screens/SneakerHistoryScreens/air-jordan-17-screen';
+import AirJordan18Screen from '../screens/SneakerHistoryScreens/air-jordan-18-screen';
+import AirJordan19Screen from '../screens/SneakerHistoryScreens/air-jordan-19-screen';
+import AirJordan20Screen from '../screens/SneakerHistoryScreens/air-jordan-20-screen';
+import AirJordan21Screen from '../screens/SneakerHistoryScreens/air-jordan-21-screen';
+import AirJordan22Screen from '../screens/SneakerHistoryScreens/air-jordan-22-screen';
+import AirJordan23Screen from '../screens/SneakerHistoryScreens/air-jordan-23-screen';
+import {LogoTitle} from '../components/logo-title';
+
+import CalendarScreen from '../screens/calendar-screen';
+import FebruaryScreen from '../screens/MonthsScreens/february-screen';
+import MarchScreen from '../screens/MonthsScreens/march-screen';
+import AprilScreen from '../screens/MonthsScreens/april-screen';
+import MayScreen from '../screens/MonthsScreens/may-screen';
+import JuneScreen from '../screens/MonthsScreens/june-screen';
+import JulyScreen from '../screens/MonthsScreens/july-screen';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const Feedstack = ({navigation}) => (
   <Stack.Navigator>
+      <Stack.Screen
+      name="Calendar"
+      component={CalendarScreen}
+      options={{
+        headerTitle: props => <LogoTitle {...props} />,
+        headerTitleAlign: 'center',
+        headerTitleStyle: {
+          color: 'red',
+          fontFamily: 'Georgia',
+          fontSize: 18,
+        },
+        headerStyle: {
+          shadowColor: '#fff',
+          elevation: 0,
+          backgroundColor: '#9FA4A9',
+        },
+      }}
+    />
+    
     <Stack.Screen
-      name="Jordan Release Dates"
+      name="2021"
       component={HomeScreen}
       options={{
         headerTitle: props => <LogoTitle {...props} />,
@@ -64,6 +93,120 @@ const Feedstack = ({navigation}) => (
     />
 
     <Stack.Screen
+      name="February"
+      component={FebruaryScreen}
+      options={{
+        headerTitle: props => <LogoTitle {...props} />,
+        headerTitleAlign: 'center',
+        headerTitleStyle: {
+          color: 'red',
+          fontFamily: 'Georgia',
+          fontSize: 18,
+        },
+        headerStyle: {
+          shadowColor: '#fff',
+          elevation: 0,
+          backgroundColor: '#9FA4A9',
+        },
+      }}
+    />
+
+    <Stack.Screen
+      name="March"
+      component={MarchScreen}
+      options={{
+        headerTitle: props => <LogoTitle {...props} />,
+        headerTitleAlign: 'center',
+        headerTitleStyle: {
+          color: 'red',
+          fontFamily: 'Georgia',
+          fontSize: 18,
+        },
+        headerStyle: {
+          shadowColor: '#fff',
+          elevation: 0,
+          backgroundColor: '#9FA4A9',
+        },
+      }}
+    />
+
+    <Stack.Screen
+      name="April"
+      component={AprilScreen}
+      options={{
+        headerTitle: props => <LogoTitle {...props} />,
+        headerTitleAlign: 'center',
+        headerTitleStyle: {
+          color: 'red',
+          fontFamily: 'Georgia',
+          fontSize: 18,
+        },
+        headerStyle: {
+          shadowColor: '#fff',
+          elevation: 0,
+          backgroundColor: '#9FA4A9',
+        },
+      }}
+    />
+
+    <Stack.Screen
+      name="May"
+      component={MayScreen}
+      options={{
+        headerTitle: props => <LogoTitle {...props} />,
+        headerTitleAlign: 'center',
+        headerTitleStyle: {
+          color: 'red',
+          fontFamily: 'Georgia',
+          fontSize: 18,
+        },
+        headerStyle: {
+          shadowColor: '#fff',
+          elevation: 0,
+          backgroundColor: '#9FA4A9',
+        },
+      }}
+    />
+
+    <Stack.Screen
+      name="June"
+      component={JuneScreen}
+      options={{
+        headerTitle: props => <LogoTitle {...props} />,
+        headerTitleAlign: 'center',
+        headerTitleStyle: {
+          color: 'red',
+          fontFamily: 'Georgia',
+          fontSize: 18,
+        },
+        headerStyle: {
+          shadowColor: '#fff',
+          elevation: 0,
+          backgroundColor: '#9FA4A9',
+        },
+      }}
+    />
+
+    <Stack.Screen
+      name="July"
+      component={JulyScreen}
+      options={{
+        headerTitle: props => <LogoTitle {...props} />,
+        headerTitleAlign: 'center',
+        headerTitleStyle: {
+          color: 'red',
+          fontFamily: 'Georgia',
+          fontSize: 18,
+        },
+        headerStyle: {
+          shadowColor: '#fff',
+          elevation: 0,
+          backgroundColor: '#9FA4A9',
+        },
+      }}
+    />
+
+    {/* <Stack.Screen
       name="HomeProfile"
       component={ProfileScreen}
       options={{
@@ -81,7 +224,8 @@ const Feedstack = ({navigation}) => (
           </View>
         ),
       }}
-    />
+    /> */}
+
   </Stack.Navigator>
 );
 
@@ -232,7 +376,7 @@ const AppStack = () => {
         }}
       />
 
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Account"
         component={ProfileStack}
         options={{
@@ -240,7 +384,7 @@ const AppStack = () => {
             <Ionicons name="person-outline" color={color} size={size} />
           ),
         }}
-      />
+      /> */}
 
       <Tab.Screen
         name="Info"

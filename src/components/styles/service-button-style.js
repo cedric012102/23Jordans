@@ -13,6 +13,7 @@ export const styles = StyleSheet.create({
     width: 32,
     marginTop: 8,
     marginLeft: 24,
+    borderRadius: 20, 
   },
   textStyle: {
     textAlign: 'left',

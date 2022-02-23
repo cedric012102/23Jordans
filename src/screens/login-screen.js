@@ -75,13 +75,13 @@ const LoginScreen = ({navigation}) => {
             <Text style={styles.navButtonText}>Forgot Password?</Text>
           </TouchableOpacity>
 
-          <SocialButton
+          {/* <SocialButton
             buttonTitle="Sign In With Facebook"
             btnType="facebook"
             color="#4867aa"
             backgroundColor="#e6eaf4"
             onPress={() => fbLogin()}
-          />
+          /> */}
 
           <SocialButton
             buttonTitle="Sign In With Google"

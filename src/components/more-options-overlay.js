@@ -1,17 +1,30 @@
 import ActionSheet from '@alessiocancian/react-native-actionsheet';
-import React, {useRef} from 'react';
-import {Linking, Platform, Text, TouchableOpacity} from 'react-native';
+import React, {useRef, useContext} from 'react';
+import {Linking, Platform, Text, TouchableOpacity, Alert} from 'react-native';
 import {AwesomeModal} from 'react-native-awesome-modal';
 import {Navigation} from 'react-native-navigation';
 import {styles} from './styles/more-options-overlay-style';
 import {ServiceButton} from './service-button';
 import {useNavigation} from '@react-navigation/native';
+import {AuthContext} from '../navigation/AuthProvider';
 
 export function MoreOptionsOverlay({componentId}) {
   const navigation = useNavigation();
   const actionSheetRef = useRef(null);
   const isActionSheetOpen = useRef(false);
   const awesomeModalRef = useRef(null);
+  const {user, logout} = useContext(AuthContext);
+
+  const logoutAlert = () =>
+  Alert.alert('Logout!', 'Are You Sure You Want To Logout?', [
+    {
+      text: 'Cancel',
+      onPress: () => console.log('Cancel Pressed'),
+      style: 'cancel',
+    },
+    {text: 'Logout', onPress: () => logout()},
+  ]);
+
   return (
     <AwesomeModal
       ref={awesomeModalRef}
@@ -31,6 +44,11 @@ export function MoreOptionsOverlay({componentId}) {
         image={require('../assets/users/jordanlogo.webp')}
         label="Account Information"
         onPress={() => navigation.navigate('Account Information')}
+      />
+       <ServiceButton
+        image={require('../assets/users/jordanlogo.webp')}
+        label="Logout"
+        onPress={logoutAlert}
       />
 
       {/* <TouchableOpacity onPress={() => awesomeModalRef.current.close()}>
