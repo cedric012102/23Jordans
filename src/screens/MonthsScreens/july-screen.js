@@ -80,6 +80,12 @@ const JulyScreen = () => {
                 liked={true}
               />
               <ReleaseDateCard
+                userName="July 23"
+                name="RETRO 5 - White/Concord"
+                postImg={require('../../assets/images/5Concord.jpg')}
+                liked={true}
+              />
+              <ReleaseDateCard
                 userName="July 30"
                 name="RETRO 12 - Grey/White"
                 postImg={require('../../assets/images/GreyWhite12.jpeg')}

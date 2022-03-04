@@ -109,6 +109,12 @@ const AprilScreen = () => {
                 postImg={require('../../assets/images/7210Low.jpeg')}
                 liked={true}
               />
+              <ReleaseDateCard
+                userName="April 28"
+                name="Womens XI LOW - White/Pure Violet"
+                postImg={require('../../assets/images/11LowPureViolet.jpeg')}
+                liked={true}
+              />
             </Container>
           </ScrollView>
         )}

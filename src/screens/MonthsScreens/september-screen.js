@@ -15,7 +15,7 @@ import {Container} from '../../../styles/FeedStyles';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {ReleaseDateCard} from '../../components/release-date-card';
 
-const MarchScreen = () => {
+const SeptemberScreen = () => {
     const [loading, setLoading] = useState(true);
 
     if (loading) {
@@ -74,57 +74,9 @@ const MarchScreen = () => {
           <ScrollView>
             <Container>
               <ReleaseDateCard
-                userName="March 5"
-                name="RETRO 6 - White/UNC"
-                postImg={require('../../assets/images/nc6.jpeg')}
-                liked={true}
-              />
-               <ReleaseDateCard
-                userName="March 8"
-                name="Womens RETRO 6 - White/Mint"
-                postImg={require('../../assets/images/mint6.webp')}
-                liked={true}
-              />
-               <ReleaseDateCard
-                userName="March 11"
-                name="RETRO 12 - “Playoffs”"
-                postImg={require('../../assets/images/retro12playoffs.webp')}
-                liked={true}
-              />
-               <ReleaseDateCard
-                userName="March 18"
-                name="RETRO 1 - “Rebellionaire”"
-                postImg={require('../../assets/images/rebellionaire.png')}
-                liked={true}
-              />
-               <ReleaseDateCard
-                userName="March 19"
-                name="RETRO 13 - White/Yellow"
-                postImg={require('../../assets/images/13WhiteYellow.jpeg')}
-                liked={true}
-              />
-               <ReleaseDateCard
-                userName="March 24"
-                name="RETRO 8 - Rui Hachimura"
-                postImg={require('../../assets/images/RuiHachimura8.webp')}
-                liked={true}
-              />
-               <ReleaseDateCard
-                userName="March 25"
-                name="RETRO 5 - Jade"
-                postImg={require('../../assets/images/jade5.webp')}
-                liked={true}
-              />
-               <ReleaseDateCard
-                userName="March 26"
-                name="Mens RETRO 3 Canvas - Muslin/Sail"
-                postImg={require('../../assets/images/canvas3.webp')}
-                liked={true}
-              />
-               <ReleaseDateCard
-                userName="March 31"
-                name="AIR JORDAN 36 - Black/Infrared"
-                postImg={require('../../assets/images/36Bred.jpg')}
+                userName="September 3"
+                name="RETRO 6 - “Georgetown”"
+                postImg={require('../../assets/images/6Georgetown.jpeg')}
                 liked={true}
               />
             </Container>
@@ -134,4 +86,4 @@ const MarchScreen = () => {
     );
   };
 
-export default MarchScreen;
+export default SeptemberScreen;

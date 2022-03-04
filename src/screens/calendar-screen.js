@@ -39,6 +39,10 @@ const CalendarScreen = ({navigation}) => {
         navigation.navigate('July');
       };
 
+    const septemberReleases = () => {
+        navigation.navigate('September');
+      };
+
       function monthsOnShowActionSheet({navigation}) {
         if (Platform.OS === 'ios') {
           ActionSheetIOS.showActionSheetWithOptions(
@@ -64,7 +68,7 @@ const CalendarScreen = ({navigation}) => {
               } else if (buttonIndex === 8) {
                 januaryReleases();
               } else if (buttonIndex === 9) {
-                januaryReleases();
+                septemberReleases();
               } else if (buttonIndex === 10) {
                 januaryReleases();
               } else if (buttonIndex === 11) {

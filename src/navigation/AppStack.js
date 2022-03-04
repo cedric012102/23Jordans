@@ -48,6 +48,7 @@ import AprilScreen from '../screens/MonthsScreens/april-screen';
 import MayScreen from '../screens/MonthsScreens/may-screen';
 import JuneScreen from '../screens/MonthsScreens/june-screen';
 import JulyScreen from '../screens/MonthsScreens/july-screen';
+import SeptemberScreen from '../screens/MonthsScreens/september-screen';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -190,6 +191,25 @@ const Feedstack = ({navigation}) => (
     <Stack.Screen
       name="July"
       component={JulyScreen}
+      options={{
+        headerTitle: props => <LogoTitle {...props} />,
+        headerTitleAlign: 'center',
+        headerTitleStyle: {
+          color: 'red',
+          fontFamily: 'Georgia',
+          fontSize: 18,
+        },
+        headerStyle: {
+          shadowColor: '#fff',
+          elevation: 0,
+          backgroundColor: '#9FA4A9',
+        },
+      }}
+    />
+
+    <Stack.Screen
+      name="September"
+      component={SeptemberScreen}
       options={{
         headerTitle: props => <LogoTitle {...props} />,
         headerTitleAlign: 'center',
