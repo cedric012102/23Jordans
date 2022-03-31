@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -93,6 +93,17 @@ const Feedstack = ({navigation}) => (
           elevation: 0,
           backgroundColor: '#9FA4A9',
         },
+        headerRight: () => (
+          <View style={{marginRight: 18, flexDirection: 'row'}}>
+            <TouchableOpacity onPress={() => navigation.navigate('February')}>
+            <Ionicons
+                name="chevron-forward"
+                size={32}
+                color="blue"
+              />
+            </TouchableOpacity>
+          </View>
+        ),
       }}
     />
 
@@ -112,6 +123,17 @@ const Feedstack = ({navigation}) => (
           elevation: 0,
           backgroundColor: '#9FA4A9',
         },
+        headerRight: () => (
+          <View style={{marginRight: 18, flexDirection: 'row'}}>
+            <TouchableOpacity onPress={() => navigation.navigate('March')}>
+            <Ionicons
+                name="chevron-forward"
+                size={32}
+                color="blue"
+              />
+            </TouchableOpacity>
+          </View>
+        ),
       }}
     />
 
@@ -131,6 +153,17 @@ const Feedstack = ({navigation}) => (
           elevation: 0,
           backgroundColor: '#9FA4A9',
         },
+        headerRight: () => (
+          <View style={{marginRight: 18, flexDirection: 'row'}}>
+            <TouchableOpacity onPress={() => navigation.navigate('April')}>
+            <Ionicons
+                name="chevron-forward"
+                size={32}
+                color="blue"
+              />
+            </TouchableOpacity>
+          </View>
+        ),
       }}
     />
 
@@ -150,6 +183,17 @@ const Feedstack = ({navigation}) => (
           elevation: 0,
           backgroundColor: '#9FA4A9',
         },
+        headerRight: () => (
+          <View style={{marginRight: 18, flexDirection: 'row'}}>
+            <TouchableOpacity onPress={() => navigation.navigate('May')}>
+            <Ionicons
+                name="chevron-forward"
+                size={32}
+                color="blue"
+              />
+            </TouchableOpacity>
+          </View>
+        ),
       }}
     />
 
@@ -169,6 +213,17 @@ const Feedstack = ({navigation}) => (
           elevation: 0,
           backgroundColor: '#9FA4A9',
         },
+        headerRight: () => (
+          <View style={{marginRight: 18, flexDirection: 'row'}}>
+            <TouchableOpacity onPress={() => navigation.navigate('June')}>
+            <Ionicons
+                name="chevron-forward"
+                size={32}
+                color="blue"
+              />
+            </TouchableOpacity>
+          </View>
+        ),
       }}
     />
 
@@ -188,6 +243,17 @@ const Feedstack = ({navigation}) => (
           elevation: 0,
           backgroundColor: '#9FA4A9',
         },
+        headerRight: () => (
+          <View style={{marginRight: 18, flexDirection: 'row'}}>
+            <TouchableOpacity onPress={() => navigation.navigate('July')}>
+            <Ionicons
+                name="chevron-forward"
+                size={32}
+                color="blue"
+              />
+            </TouchableOpacity>
+          </View>
+        ),
       }}
     />
 
@@ -207,6 +273,17 @@ const Feedstack = ({navigation}) => (
           elevation: 0,
           backgroundColor: '#9FA4A9',
         },
+        headerRight: () => (
+          <View style={{marginRight: 18, flexDirection: 'row'}}>
+            <TouchableOpacity onPress={() => navigation.navigate('August')}>
+            <Ionicons
+                name="chevron-forward"
+                size={32}
+                color="blue"
+              />
+            </TouchableOpacity>
+          </View>
+        ),
       }}
     />
 
@@ -226,6 +303,17 @@ const Feedstack = ({navigation}) => (
           elevation: 0,
           backgroundColor: '#9FA4A9',
         },
+        headerRight: () => (
+          <View style={{marginRight: 18, flexDirection: 'row'}}>
+            <TouchableOpacity onPress={() => navigation.navigate('September')}>
+            <Ionicons
+                name="chevron-forward"
+                size={32}
+                color="blue"
+              />
+            </TouchableOpacity>
+          </View>
+        ),
       }}
     />
 
@@ -246,6 +334,17 @@ const Feedstack = ({navigation}) => (
           elevation: 0,
           backgroundColor: '#9FA4A9',
         },
+        headerRight: () => (
+          <View style={{marginRight: 18, flexDirection: 'row'}}>
+            <TouchableOpacity onPress={() => navigation.navigate('October')}>
+            <Ionicons
+                name="chevron-forward"
+                size={32}
+                color="blue"
+              />
+            </TouchableOpacity>
+          </View>
+        ),
       }}
     />
 
@@ -265,6 +364,17 @@ const Feedstack = ({navigation}) => (
           elevation: 0,
           backgroundColor: '#9FA4A9',
         },
+        headerRight: () => (
+          <View style={{marginRight: 18, flexDirection: 'row'}}>
+            <TouchableOpacity onPress={() => navigation.navigate('November')}>
+            <Ionicons
+                name="chevron-forward"
+                size={32}
+                color="blue"
+              />
+            </TouchableOpacity>
+          </View>
+        ),
       }}
     />
 
@@ -284,6 +394,17 @@ const Feedstack = ({navigation}) => (
           elevation: 0,
           backgroundColor: '#9FA4A9',
         },
+        headerRight: () => (
+          <View style={{marginRight: 18, flexDirection: 'row'}}>
+            <TouchableOpacity onPress={() => navigation.navigate('December')}>
+            <Ionicons
+                name="chevron-forward"
+                size={32}
+                color="blue"
+              />
+            </TouchableOpacity>
+          </View>
+        ),
       }}
     />
 

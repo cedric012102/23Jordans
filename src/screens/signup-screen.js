@@ -26,7 +26,7 @@ const SignupScreen = ({navigation}) => {
   const [password, setPassword] = useState();
   const [confirmPassword, setConfirmPassword] = useState();
 
-  const {register, googleLogin, fbLogin, reset} = useContext(AuthContext);
+  const {register, googleLogin, appleLogin, reset} = useContext(AuthContext);
 
   return (
     <ScrollView>
@@ -85,19 +85,19 @@ const SignupScreen = ({navigation}) => {
         </TouchableOpacity>
 
         <SocialButton
-          buttonTitle="Sign Up With Facebook"
-          btnType="facebook"
-          color="#4867aa"
-          backgroundColor="#e6eaf4"
-          onPress={() => fbLogin()}
-        />
-
-        <SocialButton
           buttonTitle="Sign Up With Google"
           btnType="google"
-          color="#de4d41"
-          backgroundColor="#f5e7ea"
+          color="#468C98"
+          backgroundColor="#CFFFE5"
           onPress={() => googleLogin()}
+        />
+        
+        <SocialButton
+          buttonTitle="Sign Up With Apple"
+          btnType="apple"
+          color="black"
+          backgroundColor="#fff"
+          onPress={() => appleLogin()}
         />
 
         <TouchableOpacity
