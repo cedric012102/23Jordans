@@ -2,8 +2,6 @@ import React from 'react';
 import {View} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-
-import HomeScreen from '../screens/home-screen';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -42,13 +40,18 @@ import AirJordan23Screen from '../screens/SneakerHistoryScreens/air-jordan-23-sc
 import {LogoTitle} from '../components/logo-title';
 
 import CalendarScreen from '../screens/calendar-screen';
+import JanuaryScreen from '../screens/MonthsScreens/january-screen';
 import FebruaryScreen from '../screens/MonthsScreens/february-screen';
 import MarchScreen from '../screens/MonthsScreens/march-screen';
 import AprilScreen from '../screens/MonthsScreens/april-screen';
 import MayScreen from '../screens/MonthsScreens/may-screen';
 import JuneScreen from '../screens/MonthsScreens/june-screen';
 import JulyScreen from '../screens/MonthsScreens/july-screen';
+import AugustScreen from '../screens/MonthsScreens/august-screen';
 import SeptemberScreen from '../screens/MonthsScreens/september-screen';
+import OctoberScreen from '../screens/MonthsScreens/october-screen';
+import NovemberScreen from '../screens/MonthsScreens/november-screen';
+import DecemberScreen from '../screens/MonthsScreens/december-screen';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -73,10 +76,10 @@ const Feedstack = ({navigation}) => (
         },
       }}
     />
-    
+
     <Stack.Screen
-      name="2021"
-      component={HomeScreen}
+      name="January"
+      component={JanuaryScreen}
       options={{
         headerTitle: props => <LogoTitle {...props} />,
         headerTitleAlign: 'center',
@@ -208,8 +211,85 @@ const Feedstack = ({navigation}) => (
     />
 
     <Stack.Screen
+      name="August"
+      component={AugustScreen}
+      options={{
+        headerTitle: props => <LogoTitle {...props} />,
+        headerTitleAlign: 'center',
+        headerTitleStyle: {
+          color: 'red',
+          fontFamily: 'Georgia',
+          fontSize: 18,
+        },
+        headerStyle: {
+          shadowColor: '#fff',
+          elevation: 0,
+          backgroundColor: '#9FA4A9',
+        },
+      }}
+    />
+
+
+    <Stack.Screen
       name="September"
       component={SeptemberScreen}
+      options={{
+        headerTitle: props => <LogoTitle {...props} />,
+        headerTitleAlign: 'center',
+        headerTitleStyle: {
+          color: 'red',
+          fontFamily: 'Georgia',
+          fontSize: 18,
+        },
+        headerStyle: {
+          shadowColor: '#fff',
+          elevation: 0,
+          backgroundColor: '#9FA4A9',
+        },
+      }}
+    />
+
+    <Stack.Screen
+      name="October"
+      component={OctoberScreen}
+      options={{
+        headerTitle: props => <LogoTitle {...props} />,
+        headerTitleAlign: 'center',
+        headerTitleStyle: {
+          color: 'red',
+          fontFamily: 'Georgia',
+          fontSize: 18,
+        },
+        headerStyle: {
+          shadowColor: '#fff',
+          elevation: 0,
+          backgroundColor: '#9FA4A9',
+        },
+      }}
+    />
+
+    <Stack.Screen
+      name="November"
+      component={NovemberScreen}
+      options={{
+        headerTitle: props => <LogoTitle {...props} />,
+        headerTitleAlign: 'center',
+        headerTitleStyle: {
+          color: 'red',
+          fontFamily: 'Georgia',
+          fontSize: 18,
+        },
+        headerStyle: {
+          shadowColor: '#fff',
+          elevation: 0,
+          backgroundColor: '#9FA4A9',
+        },
+      }}
+    />
+
+    <Stack.Screen
+      name="December"
+      component={DecemberScreen}
       options={{
         headerTitle: props => <LogoTitle {...props} />,
         headerTitleAlign: 'center',
@@ -406,7 +486,7 @@ const AppStack = () => {
         }}
       /> */}
 
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Info"
         component={AppInfo}
         options={{
@@ -414,7 +494,7 @@ const AppStack = () => {
             <MaterialIcons name="menu" color={color} size={size} />
           ),
         }}
-      />
+      /> */}
 
       <Tab.Screen
         name="More"

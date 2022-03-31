@@ -75,44 +75,56 @@ const AprilScreen = () => {
             <Container>
               <ReleaseDateCard
                 userName="April 2"
-                name="RETRO 13 - Navy/Black"
-                postImg={require('../../assets/images/navy13.webp')}
+                name="RETRO 1 HI ‘85 - “Georgetown”"
+                postImg={require('../../assets/images/Apr2022/Hoyas.jpg')}
                 liked={true}
               />
               <ReleaseDateCard
                 userName="April 8"
                 name="UNION x AIR JORDAN 2 - Grey Fog"
-                postImg={require('../../assets/images/union2.webp')}
+                postImg={require('../../assets/images/Apr2022/union2.webp')}
                 liked={true}
               />
                <ReleaseDateCard
                 userName="April 8"
                 name="UNION x AIR JORDAN 2 - Rattan"
-                postImg={require('../../assets/images/union2rattan.webp')}
+                postImg={require('../../assets/images/Apr2022/union2rattan.webp')}
                 liked={true}
               />
                <ReleaseDateCard
                 userName="April 9"
-                name="RETRO 1 - White/Red"
-                postImg={require('../../assets/images/WhiteRed1.jpeg')}
+                name="RETRO 5 - Jade"
+                postImg={require('../../assets/images/Apr2022/5jade.jpeg')}
                 liked={true}
               />
                <ReleaseDateCard
                 userName="April 16"
-                name="RETRO 5 - “Easter”"
-                postImg={require('../../assets/images/Retro5Easter.webp')}
+                name="Mens AIR JORDAN 7 SE - Shimmer/Sapphire/Pink"
+                postImg={require('../../assets/images/Apr2022/sapphire7se.jpeg')}
+                liked={true}
+              />
+              <ReleaseDateCard
+                userName="April 21"
+                name="AIR JORDAN XXXVI - “Sunset”"
+                postImg={require('../../assets/images/Apr2022/Apr21Sunset36.jpeg')}
                 liked={true}
               />
                <ReleaseDateCard
-                userName="April 23"
-                name="RETRO 11 LOW - “72-10”"
-                postImg={require('../../assets/images/7210Low.jpeg')}
+                userName="April 27"
+                name="RETRO 5 - “Easter”"
+                postImg={require('../../assets/images/Apr2022/Retro5Easter.webp')}
                 liked={true}
               />
               <ReleaseDateCard
                 userName="April 28"
                 name="Womens XI LOW - White/Pure Violet"
-                postImg={require('../../assets/images/11LowPureViolet.jpeg')}
+                postImg={require('../../assets/images/Apr2022/11LowPureViolet.jpeg')}
+                liked={true}
+              />
+              <ReleaseDateCard
+                userName="April 30"
+                name="RETRO 13 - Navy/Black"
+                postImg={require('../../assets/images/Apr2022/navy13.webp')}
                 liked={true}
               />
             </Container>

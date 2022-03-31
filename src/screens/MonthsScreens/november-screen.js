@@ -15,7 +15,7 @@ import {Container} from '../../../styles/FeedStyles';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {ReleaseDateCard} from '../../components/release-date-card';
 
-const SeptemberScreen = () => {
+const NovemberScreen = () => {
     const [loading, setLoading] = useState(true);
 
     if (loading) {
@@ -74,33 +74,21 @@ const SeptemberScreen = () => {
           <ScrollView>
             <Container>
               <ReleaseDateCard
-                userName="September 3"
-                name="RETRO 6 - “Georgetown”"
-                postImg={require('../../assets/images/Sept2022/6Georgetown.jpeg')}
+                userName="November 19"
+                name="RETRO 6 - Black/Metallic Silver"
+                postImg={require('../../assets/images/Nov2022/BlackMetallic6.jpeg')}
                 liked={true}
               />
               <ReleaseDateCard
-                userName="Date Unknown"
-                name="RETRO 14 - Ginger/White"
-                postImg={require('../../assets/images/Sept2022/GingerWhite14.jpeg')}
+                userName="November 25"
+                name="Womens RETRO 11 - Midnight Navy"
+                postImg={require('../../assets/images/Nov2022/WmnsMidnightNavy11.jpeg')}
                 liked={true}
               />
               <ReleaseDateCard
-                userName="Date Unknown"
-                name="RETRO 13 - White/Blue/Grey"
-                postImg={require('../../assets/images/Sept2022/FrenchBlueWhite13.jpeg')}
-                liked={true}
-              />
-              <ReleaseDateCard
-                userName="Date Unknown"
-                name="RETRO 11 LOW IE - Grey/White"
-                postImg={require('../../assets/images/Sept2022/Grey11.jpg')}
-                liked={true}
-              />
-              <ReleaseDateCard
-                userName="Date Unknown"
-                name="Womens RETRO 1 HI OG - Denim"
-                postImg={require('../../assets/images/Sept2022/WomenDenim1.jpg')}
+                userName="November 26"
+                name="RETRO 7 - White/Cardinal Red"
+                postImg={require('../../assets/images/Nov2022/Cardinal7.jpeg')}
                 liked={true}
               />
             </Container>
@@ -110,4 +98,4 @@ const SeptemberScreen = () => {
     );
   };
 
-export default SeptemberScreen;
+export default NovemberScreen;

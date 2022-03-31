@@ -15,7 +15,7 @@ import {Container} from '../../../styles/FeedStyles';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {ReleaseDateCard} from '../../components/release-date-card';
 
-const SeptemberScreen = () => {
+const OctoberScreen = () => {
     const [loading, setLoading] = useState(true);
 
     if (loading) {
@@ -74,33 +74,27 @@ const SeptemberScreen = () => {
           <ScrollView>
             <Container>
               <ReleaseDateCard
-                userName="September 3"
-                name="RETRO 6 - “Georgetown”"
-                postImg={require('../../assets/images/Sept2022/6Georgetown.jpeg')}
+                userName="October 15"
+                name="RETRO 12 - Black/Metallic Gold"
+                postImg={require('../../assets/images/Oct2022/BlackMetallic12.jpg')}
+                liked={true}
+              />
+              <ReleaseDateCard
+                userName="October 22"
+                name="RETRO 2 OG - “Chicago”"
+                postImg={require('../../assets/images/Oct2022/OG2Chicago.jpg')}
+                liked={true}
+              />
+              <ReleaseDateCard
+                userName="October 29"
+                name="RETRO 1 OG - “Chicago”"
+                postImg={require('../../assets/images/Oct2022/OGChicago1.jpg')}
                 liked={true}
               />
               <ReleaseDateCard
                 userName="Date Unknown"
-                name="RETRO 14 - Ginger/White"
-                postImg={require('../../assets/images/Sept2022/GingerWhite14.jpeg')}
-                liked={true}
-              />
-              <ReleaseDateCard
-                userName="Date Unknown"
-                name="RETRO 13 - White/Blue/Grey"
-                postImg={require('../../assets/images/Sept2022/FrenchBlueWhite13.jpeg')}
-                liked={true}
-              />
-              <ReleaseDateCard
-                userName="Date Unknown"
-                name="RETRO 11 LOW IE - Grey/White"
-                postImg={require('../../assets/images/Sept2022/Grey11.jpg')}
-                liked={true}
-              />
-              <ReleaseDateCard
-                userName="Date Unknown"
-                name="Womens RETRO 1 HI OG - Denim"
-                postImg={require('../../assets/images/Sept2022/WomenDenim1.jpg')}
+                name="RETRO 4 - White/Navy/Black"
+                postImg={require('../../assets/images/Oct2022/WhiteNavyBlack4.jpg')}
                 liked={true}
               />
             </Container>
@@ -110,4 +104,4 @@ const SeptemberScreen = () => {
     );
   };
 
-export default SeptemberScreen;
+export default OctoberScreen;

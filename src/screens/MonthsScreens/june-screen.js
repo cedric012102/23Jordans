@@ -76,31 +76,49 @@ const JuneScreen = () => {
               <ReleaseDateCard
                 userName="June 4"
                 name="RETRO 6 - White/Red"
-                postImg={require('../../assets/images/WhiteRed6.jpeg')}
+                postImg={require('../../assets/images/Jun2022/WhiteRed6.jpeg')}
                 liked={true}
               />
               <ReleaseDateCard
                 userName="June 11"
                 name="RETRO 1 - Volt/Black/Sail"
-                postImg={require('../../assets/images/VoltBlackSail1.jpeg')}
+                postImg={require('../../assets/images/Jun2022/VoltBlackSail1.jpeg')}
                 liked={true}
               />
                <ReleaseDateCard
                 userName="June 18"
                 name="RETRO 3 - White/Iris/Cement"
-                postImg={require('../../assets/images/WhiteIrisCement3.jpeg')}
+                postImg={require('../../assets/images/Jun2022/WhiteIrisCement3.jpeg')}
                 liked={true}
               />
                <ReleaseDateCard
                 userName="June 24"
                 name="RETRO 4 - Grey/Infrared"
-                postImg={require('../../assets/images/GreyInfrared4.webp')}
+                postImg={require('../../assets/images/Jun2022/GreyInfrared4.webp')}
                 liked={true}
               />
               <ReleaseDateCard
                 userName="June 25"
                 name="RETRO 4 - White/Black/Grey"
-                postImg={require('../../assets/images/WhiteBlackGrey4.jpeg')}
+                postImg={require('../../assets/images/Jun2022/WhiteBlackGrey4.jpeg')}
+                liked={true}
+              />
+              <ReleaseDateCard
+                userName="Date Unknown"
+                name="RETRO 1 HI OG - White/Black/Grey"
+                postImg={require('../../assets/images/Jun2022/retro1highwhiteblackgrey.jpeg')}
+                liked={true}
+              />
+              <ReleaseDateCard
+                userName="Date Unknown"
+                name="RETRO 5 - Reflective Silver/Green Bean"
+                postImg={require('../../assets/images/Jun2022/Retro5ReflectiveSilverGreen.jpeg')}
+                liked={true}
+              />
+              <ReleaseDateCard
+                userName="Date Unknown"
+                name="RETRO 3 - Black/Fossil Stone/Sail"
+                postImg={require('../../assets/images/Jun2022/BlackFossil3.jpeg')}
                 liked={true}
               />
             </Container>

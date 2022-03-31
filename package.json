@@ -45,7 +45,7 @@
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "react": "17.0.2",
-    "react-native": "0.67.3",
+    "react-native": "0.67.4",
     "react-native-action-button": "^2.8.5",
     "react-native-awesome-modal": "^0.2.0",
     "react-native-elements": "^3.4.2",

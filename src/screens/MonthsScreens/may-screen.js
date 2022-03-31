@@ -73,28 +73,40 @@ const MayScreen = () => {
         ) : (
           <ScrollView>
             <Container>
-              <ReleaseDateCard
-                userName="May 13"
-                name="Womens RETRO 3 - White/Mocha"
-                postImg={require('../../assets/images/WhiteMocha3.webp')}
+            <ReleaseDateCard
+                userName="May 9"
+                name="RETRO 9 - Chile Red"
+                postImg={require('../../assets/images/May2022/ChileRed9.webp')}
+                liked={true}
+              />
+            <ReleaseDateCard
+                userName="May 11"
+                name="RETRO 6 - White/Navy"
+                postImg={require('../../assets/images/May2022/MidnightNavy6.jpeg')}
+                liked={true}
+              />
+            <ReleaseDateCard
+                userName="May 14"
+                name="RETRO 11 LOW - “72-10”"
+                postImg={require('../../assets/images/May2022/7210Low.jpeg')}
                 liked={true}
               />
               <ReleaseDateCard
+                userName="May 15"
+                name="Womens RETRO 3 - Neapolitan"
+                postImg={require('../../assets/images/May2022/May15Neapolitan3.jpeg')}
+                liked={true}
+              />
+               <ReleaseDateCard
                 userName="May 20"
                 name="CLOT x AJ 5 LOW"
-                postImg={require('../../assets/images/clot5.jpeg')}
+                postImg={require('../../assets/images/May2022/clot5.jpeg')}
                 liked={true}
               />
-               <ReleaseDateCard
+              <ReleaseDateCard
                 userName="May 25"
-                name="RETRO 6 - White/Navy"
-                postImg={require('../../assets/images/MidnightNavy6.jpeg')}
-                liked={true}
-              />
-               <ReleaseDateCard
-                userName="May 27"
-                name="RETRO 9 - Chile Red"
-                postImg={require('../../assets/images/ChileRed9.webp')}
+                name="RETRO 1 HI OG - White/Red"
+                postImg={require('../../assets/images/May2022/May25Retro1WhiteRed.jpg')}
                 liked={true}
               />
             </Container>

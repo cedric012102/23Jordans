@@ -12,7 +12,7 @@ const CalendarScreen = ({navigation}) => {
       };
 
     const januaryReleases = () => {
-        navigation.navigate('2021');
+        navigation.navigate('January');
       };
 
     const februaryReleases = () => {
@@ -39,8 +39,24 @@ const CalendarScreen = ({navigation}) => {
         navigation.navigate('July');
       };
 
+    const augustReleases = () => {
+        navigation.navigate('August');
+      };
+
     const septemberReleases = () => {
         navigation.navigate('September');
+      };
+
+    const octoberReleases = () => {
+        navigation.navigate('October');
+      };
+
+    const novemberReleases = () => {
+        navigation.navigate('November');
+      };
+
+    const decemberReleases = () => {
+        navigation.navigate('December');
       };
 
       function monthsOnShowActionSheet({navigation}) {
@@ -66,15 +82,15 @@ const CalendarScreen = ({navigation}) => {
               } else if (buttonIndex === 7) {
                 julyReleases();
               } else if (buttonIndex === 8) {
-                januaryReleases();
+                augustReleases();
               } else if (buttonIndex === 9) {
                 septemberReleases();
               } else if (buttonIndex === 10) {
-                januaryReleases();
+                octoberReleases();
               } else if (buttonIndex === 11) {
-                januaryReleases();
+                novemberReleases();
               } else if (buttonIndex === 12) {
-                januaryReleases();
+                decemberReleases();
               }
             },
           );

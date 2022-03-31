@@ -1,21 +1,14 @@
 import React, {useState} from "react";
 import {
     View,
-    Text,
-    FlatList,
     SafeAreaView,
-    Alert,
     ScrollView,
-    TouchableOpacity,
-    Linking,
-    ActionSheetIOS,
-    Platform,
   } from 'react-native';
 import {Container} from '../../../styles/FeedStyles';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {ReleaseDateCard} from '../../components/release-date-card';
 
-const SeptemberScreen = () => {
+const JanuaryScreen = () => {
     const [loading, setLoading] = useState(true);
 
     if (loading) {
@@ -74,33 +67,57 @@ const SeptemberScreen = () => {
           <ScrollView>
             <Container>
               <ReleaseDateCard
-                userName="September 3"
-                name="RETRO 6 - “Georgetown”"
-                postImg={require('../../assets/images/Sept2022/6Georgetown.jpeg')}
+                userName="January 2"
+                name="Air Jordan 1 Low “Light Iron Ore”"
+                postImg={require('../../assets/images/Jan2022/jan2LightIronOre.jpeg')}
                 liked={true}
               />
               <ReleaseDateCard
-                userName="Date Unknown"
-                name="RETRO 14 - Ginger/White"
-                postImg={require('../../assets/images/Sept2022/GingerWhite14.jpeg')}
+                userName="January 7"
+                name="Air Jordan 13 “Court Purple”"
+                postImg={require('../../assets/images/Jan2022/jan7courtpurple13.jpeg')}
                 liked={true}
               />
               <ReleaseDateCard
-                userName="Date Unknown"
-                name="RETRO 13 - White/Blue/Grey"
-                postImg={require('../../assets/images/Sept2022/FrenchBlueWhite13.jpeg')}
+                userName="January 10"
+                name="Air Jordan 1 Mid “College Grey”"
+                postImg={require('../../assets/images/Jan2022/jan10mid1collegegray.jpeg')}
                 liked={true}
               />
               <ReleaseDateCard
-                userName="Date Unknown"
-                name="RETRO 11 LOW IE - Grey/White"
-                postImg={require('../../assets/images/Sept2022/Grey11.jpg')}
+                userName="January 12"
+                name="Air Jordan 1 Mid “College Grey”"
+                postImg={require('../../assets/images/Jan2022/jan12lowbredtoe1.jpeg')}
                 liked={true}
               />
               <ReleaseDateCard
-                userName="Date Unknown"
-                name="Womens RETRO 1 HI OG - Denim"
-                postImg={require('../../assets/images/Sept2022/WomenDenim1.jpg')}
+                userName="January 14"
+                name="Air Jordan 4 “Red Thunder”"
+                postImg={require('../../assets/images/Jan2022/jan144redthunder.jpeg')}
+                liked={true}
+              />
+              <ReleaseDateCard
+                userName="January 17"
+                name="Air Jordan 1 Mid"
+                postImg={require('../../assets/images/Jan2022/jan17midblack1.jpeg')}
+                liked={true}
+              />
+              <ReleaseDateCard
+                userName="January 19"
+                name="Air Jordan 1 Low OG Golf “Triple White”"
+                postImg={require('../../assets/images/Jan2022/jan19golftriplewhite1.jpeg')}
+                liked={true}
+              />
+              <ReleaseDateCard
+                userName="January 19"
+                name="Air Jordan 1 Low OG Golf"
+                postImg={require('../../assets/images/Jan2022/jan19lowgolf1.jpeg')}
+                liked={true}
+              />
+              <ReleaseDateCard
+                userName="January 19"
+                name="Air Jordan 1 Low OG Golf “Shadow”"
+                postImg={require('../../assets/images/Jan2022/jan19lowgolfshadow1.jpeg')}
                 liked={true}
               />
             </Container>
@@ -110,4 +127,4 @@ const SeptemberScreen = () => {
     );
   };
 
-export default SeptemberScreen;
+export default JanuaryScreen;
