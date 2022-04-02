@@ -24,6 +24,9 @@ export const AuthProvider = ({children}) => {
             await auth().signInWithEmailAndPassword(email, password);
           } catch (e) {
             console.log(e);
+            Alert.alert(
+              'Sorry, either the email and/or password is incorrect or the user does not exist. Please try again.',
+            );
           }
         },
         googleLogin: async () => {

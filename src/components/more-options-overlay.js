@@ -22,7 +22,7 @@ export function MoreOptionsOverlay({componentId}) {
       onPress: () => console.log('Cancel Pressed'),
       style: 'cancel',
     },
-    {text: 'Logout', onPress: () => logout()},
+    {text: 'Logout', onPress: () => logout()}, Alert.alert('Logout')
   ]);
 
   return (
